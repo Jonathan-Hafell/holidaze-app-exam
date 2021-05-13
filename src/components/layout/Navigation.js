@@ -7,9 +7,10 @@ import {
   NavLink,
 } from "react-router-dom";
 import Container from "react-bootstrap/Container";
-import Home from "../home/Home";
-import About from "../about/About";
+import Login from "../login/Login";
+import Hotels from "../hotels/Hotels";
 import Contact from "../contact/Contact";
+import HotelDetail from "../hotels/HotelDetail";
 
 function Layout() {
   return (
@@ -21,23 +22,24 @@ function Layout() {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mr-auto">
-            <NavLink to="/" exact className="nav-link">
-              Home
+            <NavLink to="/hotels" exact className="nav-link">
+              Hotels
             </NavLink>
             <NavLink to="/about" className="nav-link">
-              About
+              Contact
             </NavLink>
             <NavLink to="/contact" className="nav-link">
-              Contact
+              Login
             </NavLink>
           </Nav>
         </Navbar.Collapse>
       </Navbar>
       <Container>
         <Switch>
-          <Route path="/" exact component={Home} />
-          <Route path="/about" component={About} />
-          <Route path="/contact" component={Contact} />
+          <Route path="/hotels" exact component={Hotels} />
+          <Route path="/about" component={Contact} />
+          <Route path="/contact" component={Login} />
+          <Route path="/detail/:id" component={HotelDetail} />
         </Switch>
       </Container>
     </Router>

@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { BASE_URL, HOTELS_ENDPOINT } from "../../constants/api";
+import HotelItem from "./HotelItem";
 /* import Button from "react-bootstrap/Button"; */
 
 function Hotels() {
@@ -36,7 +37,7 @@ function Hotels() {
     return <div>ERROR: An error occured</div>;
   }
 
-  return (
+  /* return (
     <>
       {hotels.map((hotel) => {
         return (
@@ -48,6 +49,15 @@ function Hotels() {
         );
       })}
     </>
+  ); */
+
+  return (
+    <div className="hotels">
+      {hotels.map(function (hotel) {
+        const { id, name } = hotel;
+        return <HotelItem key={id} id={id} name={name} />;
+      })}
+    </div>
   );
 }
 
