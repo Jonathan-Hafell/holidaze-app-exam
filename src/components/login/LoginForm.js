@@ -1,4 +1,4 @@
-import { useState } from "react";
+/* import { useState } from "react";
 import { useForm } from "react-hook-form";
 import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
@@ -6,7 +6,7 @@ import axios from "axios";
 import FormError from "../../common/FormError";
 import { BASE_URL, TOKEN_PATH } from "../../constants/api";
 
-const url = BASE_URL + TOKEN_PATH;
+const url = BASE_URL + "/" + TOKEN_PATH;
 
 const schema = yup.object().shape({
   username: yup.string().required("Please enter your username"),
@@ -37,4 +37,34 @@ export default function LoginForm() {
       setSubmitting(false);
     }
   }
+
+  return (
+    <>
+      <form onSubmit={handleSubmit(onSubmit)}>
+        {loginError && <FormError>{loginError}</FormError>}
+        <fieldset disabled={submitting}>
+          <div>
+            {errors.username && (
+              <FormError>{errors.username.message}</FormError>
+            )}
+            <input name="username" placeholder="Username" ref={register} />
+          </div>
+
+          <div>
+            {errors.password && (
+              <FormError>{errors.password.message}</FormError>
+            )}
+            <input
+              name="password"
+              placeholder="Password"
+              ref={register}
+              type="password"
+            />
+          </div>
+          <button>{submitting ? "Loggin in..." : "Login"}</button>
+        </fieldset>
+      </form>
+    </>
+  );
 }
+ */

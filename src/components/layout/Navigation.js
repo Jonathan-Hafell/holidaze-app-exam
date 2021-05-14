@@ -10,18 +10,23 @@ import Container from "react-bootstrap/Container";
 import Login from "../login/Login";
 import Hotels from "../hotels/Hotels";
 import Contact from "../contact/Contact";
+import Home from "../home/Home";
 import HotelDetail from "../hotels/HotelDetail";
+import "../../css/styles.css";
 
 function Layout() {
   return (
     <Router>
-      <Navbar bg="dark" variant="dark" expand="lg">
-        <NavLink to="/" exact>
+      <Navbar className="navbar" expand="lg">
+        <NavLink to="/Home" exact>
           <Navbar.Brand>Holidaze</Navbar.Brand>
         </NavLink>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Toggle aria-controls="basic-navbar-nav" className="test" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mr-auto">
+            <NavLink to="/Home" exact className="nav-link">
+              Home
+            </NavLink>
             <NavLink to="/hotels" exact className="nav-link">
               Hotels
             </NavLink>
@@ -36,6 +41,7 @@ function Layout() {
       </Navbar>
       <Container>
         <Switch>
+          <Route path="/Home" exact component={Home} />
           <Route path="/hotels" exact component={Hotels} />
           <Route path="/about" component={Contact} />
           <Route path="/contact" component={Login} />

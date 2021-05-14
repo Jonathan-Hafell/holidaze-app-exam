@@ -1,7 +1,12 @@
-import Heading from "../layout/Heading";
-/* import Hotels from "../hotels/Hotels"; */
+import React from "react";
+import "../../css/styles.css";
 
-export default function Home() {
-  return <>{/*  <Heading title="Hotels" />
-      <Hotels /> */}</>;
+function Home() {
+  return (
+    <>
+      <div className="bg-home"></div>
+    </>
+  );
 }
+
+export default Home;
