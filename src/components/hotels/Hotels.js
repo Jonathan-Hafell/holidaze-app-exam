@@ -54,8 +54,8 @@ function Hotels() {
   return (
     <div className="hotels">
       {hotels.map(function (hotel) {
-        const { id, name } = hotel;
-        return <HotelItem key={id} id={id} name={name} />;
+        const { id, name, imageUrl } = hotel;
+        return <HotelItem key={id} id={id} name={name} imageUrl={imageUrl} />;
       })}
     </div>
   );

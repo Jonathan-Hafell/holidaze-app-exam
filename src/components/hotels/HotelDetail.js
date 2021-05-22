@@ -53,6 +53,7 @@ function HotelDetail() {
   return (
     <div className="book-detail">
       <h1>{hotel.name}</h1>
+      <img src={hotel.imageUrl}></img>
     </div>
   );
 }
