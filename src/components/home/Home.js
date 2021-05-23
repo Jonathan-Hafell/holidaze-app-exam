@@ -72,7 +72,11 @@ function Home() {
       <div>
         <h1>Holidays type</h1>
 
-        <div></div>
+        <div className="sightseeing">
+          <i class="fas fa-shoe-prints"></i>
+          <h4>Sightseeing</h4>
+          <p>sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+        </div>
       </div>
     </>
   );
