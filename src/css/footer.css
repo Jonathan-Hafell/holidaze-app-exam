@@ -1,0 +1,43 @@
+footer {
+  background-color: rgb(45, 41, 38);
+  margin-top: 40px;
+  padding: 40px 0;
+  text-align: center;
+}
+
+.inner-fot h2 {
+  font-size: 18px;
+  color: white;
+}
+
+.contact-nr {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.contact-info {
+  color: white;
+  margin: 24px 0;
+}
+
+.fa-facebook-f {
+  color: #3c5a99;
+  font-size: 40px;
+}
+
+.fa-twitter {
+  color: #2aa9e0;
+  font-size: 40px;
+}
+
+.fa-instagram {
+  color: #f8bf75;
+  font-size: 40px;
+}
+
+.socials {
+  display: flex;
+  justify-content: space-between;
+  width: 200px;
+  margin: 16px auto 0;
+}

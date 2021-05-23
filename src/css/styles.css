@@ -11,7 +11,6 @@ body {
   width: 375px;
   height: 500px;
   background-repeat: no-repeat;
-  padding: 350px 0 0;
 }
 
 .navbar {
@@ -33,24 +32,37 @@ body {
   padding: 4px;
 }
 
-.search-container {
-  width: 250px;
+.results-container {
+  display: flex;
+  flex-flow: wrap;
+  justify-content: space-between;
 }
 
-.results-container {
-  width: 250px;
-  /*   display: flex;
-  flex-flow: wrap; */
+.result-item {
+  position: relative;
+  text-align: center;
+}
+
+.image-name {
+  color: #a03232;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin: 0;
+  font-size: 16px;
+  background-color: white;
+  padding: 4px;
 }
 
 .image {
-  width: 200px;
+  width: 150px;
+  height: 100px;
 }
 
 /* LOADER */
 .loader {
-  border: 10px solid #f3f3f3; /* Light grey */
-  border-top: 10px solid #3498db; /* Blue */
+  border: 10px solid #f3f3f3;
+  border-top: 10px solid #3498db;
   border-radius: 50%;
   width: 80px;
   height: 80px;
@@ -81,7 +93,7 @@ body {
   background-color: white;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   padding: 16px;
-  margin: 0 16px;
+  margin: -200px 16px;
 }
 
 .travel-search p {
@@ -133,16 +145,11 @@ body {
   margin: 216px 16px 0;
   overflow: auto;
   white-space: nowrap;
+  overflow: hidden;
 }
 
 .card-inner {
   padding: 16px;
-}
-
-.featured-ratings {
-  /* width: 160px; */
-  display: flex;
-  justify-content: space-between;
 }
 
 .featured-price {
@@ -152,7 +159,9 @@ body {
 }
 
 .card-name {
-  margin-bottom: 16px;
+  /*  margin-bottom: 16px; */
+  display: flex;
+  justify-content: space-between;
 }
 
 .fa-star {
@@ -180,9 +189,59 @@ body {
   font-weight: bold;
 }
 
+.featured-btn {
+  background-color: inherit;
+  color: #0061a8;
+  font-weight: bold;
+  border-radius: 0;
+}
+
+.fa-long-arrow-alt-right {
+  margin-left: 8px;
+}
+
 /* sightseeing */
+
+.holidays {
+  margin: 40px 16px 0;
+}
+
+.holidays-header {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.holidays h1 {
+  margin-bottom: 24px;
+}
+
+.holidays-wrapper {
+  display: flex;
+  flex-flow: wrap;
+  justify-content: space-between;
+}
+
 .sightseeing {
   width: 155px;
   height: 131px;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 15px 0 rgba(0, 0, 0, 0.19);
+  padding: 24px;
+  margin-bottom: 32px;
+}
+
+.sightseeing h4 {
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.fa-shoe-prints,
+.fa-ship,
+.fa-umbrella-beach,
+.fa-city {
+  font-size: 45px;
+  color: #a03232;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 16px;
 }

@@ -8,18 +8,21 @@ function FeaturedItem({ id, name, imageUrl, price, rating, reviews }) {
     <Card className="featured-card" style={{ width: "15rem" }}>
       <Card.Img variant="top" src={imageUrl} alt="img" />
       <Card.Body className="card-inner">
-        <div>
-          <Card.Title className="card-name">{name}</Card.Title>
-          <p className="price-from">
-            One night from <span className="featured-price">{price} Kr</span>
+        <div className="card-name">
+          <Card.Title>{name}</Card.Title>
+          <p>
+            {rating} <i class="fas fa-star"></i>
           </p>
         </div>
 
         <Card.Text className="featured-ratings">
-          <p>
-            {rating} <i class="fas fa-star"></i>
+          <p className="price-from">
+            One night from <span className="featured-price">{price} Kr</span>
           </p>
-          <p className="featured-reviews">{reviews} Reviews</p>
+          <p>
+            Based on{" "}
+            <span className="featured-reviews"> {reviews} Reviews</span>
+          </p>
         </Card.Text>
         <Link to={`detail/${id}`}>
           <Button className="featured-btn">
