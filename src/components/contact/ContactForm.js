@@ -30,17 +30,19 @@ function ContactForm() {
   console.log(errors);
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)}>
-      <input {...register("name")} />
+    <form className="contact-form" onSubmit={handleSubmit(onSubmit)}>
       {errors.name && <span>{errors.name.message}</span>}
+      <input placeholder="Name..." {...register("name")} />
 
-      <input {...register("email")} />
       {errors.email && <span>{errors.email.message}</span>}
+      <input placeholder="Email..." {...register("email")} />
 
-      <textarea {...register("message")} />
       {errors.message && <span>{errors.message.message}</span>}
+      <textarea placeholder="Message..." {...register("message")} />
 
-      <button>Send</button>
+      <button className="contact-btn">
+        Send <i class="fas fa-long-arrow-alt-right"></i>
+      </button>
     </form>
   );
 }

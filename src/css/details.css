@@ -1,0 +1,50 @@
+.hotel-details {
+  margin: 8px 16px 0;
+}
+
+.hotel-details h1 {
+  font-size: 32px;
+}
+
+.details-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.fa-star {
+  font-size: 20px;
+}
+
+.ratings span {
+  color: #289672;
+}
+
+.details-price {
+  color: #e72574;
+}
+
+.modal-price {
+  color: #e72574;
+  font-weight: bold;
+}
+
+.children-mod {
+  display: inline-block;
+}
+
+.adults-mod {
+  display: inline-block;
+  margin-right: 24px;
+}
+
+.checkout,
+.checkin {
+  margin: 16px 0 4px;
+  font-weight: bold;
+}
+
+.form-control,
+.react-numeric-input {
+  width: 100px;
+}

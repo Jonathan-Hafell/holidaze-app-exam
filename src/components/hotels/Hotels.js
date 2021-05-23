@@ -37,25 +37,23 @@ function Hotels() {
     return <div>ERROR: An error occured</div>;
   }
 
-  /* return (
-    <>
-      {hotels.map((hotel) => {
-        return (
-          <div className="hotels-container">
-            <h1 className="hotels-header" key={hotel.name}>
-              {hotel.name}
-            </h1>
-          </div>
-        );
-      })}
-    </>
-  ); */
-
   return (
     <div className="hotels">
+      <h1 className="header">Holidaze</h1>
+      <p className="options">We offer hotel stays, airbnb and b&b</p>
       {hotels.map(function (hotel) {
-        const { id, name, imageUrl } = hotel;
-        return <HotelItem key={id} id={id} name={name} imageUrl={imageUrl} />;
+        const { id, name, imageUrl, price, rating, reviews } = hotel;
+        return (
+          <HotelItem
+            key={id}
+            id={id}
+            name={name}
+            imageUrl={imageUrl}
+            price={price}
+            rating={rating}
+            reviews={reviews}
+          />
+        );
       })}
     </div>
   );

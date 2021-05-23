@@ -1,12 +1,19 @@
 import React from "react";
 import "../../css/styles.css";
+import { useState } from "react";
 import Search from "../home/Search";
 import Featured from "../featured/Featured";
+import "../../css/featured.css";
+import NumericInput from "react-numeric-input";
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
 
 function Home() {
+  const [startDate, setStartDate] = useState(new Date());
+  const [endDate, setEndDate] = useState(new Date());
+  const today = new Date();
   return (
     <>
-      <div className="bg-home"></div>
       <div className="enquiry-wrapper">
         <div className="travel-search">
           <h4>Where do you want to stay?</h4>
@@ -15,49 +22,50 @@ function Home() {
           <hr></hr>
         </div>
 
-        <div className="selection">
-          <div>
-            <label for="room">Room</label>
-
-            <select id="room">
-              <option label="1">1</option>
-              <option label="2">2</option>
-              <option label="3">3</option>
-              <option label="4">4</option>
-              <option label="5">5</option>
-              <option label="6">6</option>
-            </select>
-          </div>
-
-          <div className="people">
-            <div>
-              <label for="adults">Adults</label>
-
-              <select id="adults">
-                <option label="1">1</option>
-                <option label="2">2</option>
-                <option label="3">3</option>
-                <option label="4">4</option>
-                <option label="5">5</option>
-                <option label="6">6</option>
-              </select>
+        <div>
+          <div className="people-mod">
+            <div className="adults-mod">
+              <p>Adults:</p>
+              <NumericInput className="form-control" value={1} />
             </div>
 
-            <div>
-              <label for="children">Children</label>
-
-              <select id="children">
-                <option label="1">1</option>
-                <option label="2">2</option>
-                <option label="3">3</option>
-                <option label="4">4</option>
-                <option label="5">5</option>
-                <option label="6">6</option>
-              </select>
+            <div className="children-mod">
+              <p>Children:</p>
+              <NumericInput className="form-control" value={1} />
             </div>
           </div>
+          <p className="checkin">Check in</p>
+          <DatePicker
+            className="datepicker"
+            dateFormat="dd/MM/yyyy"
+            disabledDays={{ before: today }}
+            showWeekNumbers
+            selected={startDate}
+            onChange={(date) => setStartDate(date)}
+            peekNextMonth
+            showMonthDropdown
+            showYearDropdown
+            dropdownMode="select"
+          />{" "}
+          <i class="far fa-calendar-alt"></i>
         </div>
-        <hr></hr>
+        <div>
+          <p className="checkout">Check out</p>
+          <DatePicker
+            className="datepicker"
+            dateFormat="dd/MM/yyyy"
+            disabledDays={{ before: today }}
+            showWeekNumbers
+            selected={endDate}
+            onChange={(date) => setEndDate(date)}
+            peekNextMonth
+            showMonthDropdown
+            showYearDropdown
+            dropdownMode="select"
+          />{" "}
+          <i class="far fa-calendar-alt"></i>
+        </div>
+
         <button className="enquiry-search">Search</button>
       </div>
 

@@ -1,0 +1,31 @@
+.contact-container {
+  margin: 32px 16px 56px;
+}
+
+.contact-container h1 {
+  font-size: 32px;
+  margin-bottom: 24px;
+}
+
+.contact-form input,
+textarea {
+  width: 343px;
+  margin-bottom: 24px;
+}
+
+.contact-btn {
+  background-color: inherit;
+  color: #0061a8;
+  font-weight: bold;
+  border-radius: 0;
+  border: solid 1px #0061a8;
+  height: 38px;
+  width: 127px;
+}
+
+.contact-form span {
+  color: red;
+  margin-bottom: 8px;
+  padding: 0 0 8px 0;
+  font-weight: bold;
+}

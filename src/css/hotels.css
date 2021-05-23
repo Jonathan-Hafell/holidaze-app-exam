@@ -1,0 +1,47 @@
+.hotel-card {
+  margin: 0 16px 32px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 15px 0 rgba(0, 0, 0, 0.19);
+}
+
+.hotel-price {
+  font-weight: bold;
+  color: #e72574;
+  font-size: 20px;
+}
+
+.card-title {
+  font-size: 24px;
+}
+
+.hotel-reviews {
+  color: #289672;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.fa-star {
+  color: #ffd31d;
+  font-size: 18px;
+}
+
+.price-from {
+  margin-bottom: 8px;
+}
+
+.hotel-btn {
+  background-color: inherit;
+  color: #0061a8;
+  font-weight: bold;
+  border-radius: 0;
+}
+
+.header {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 24px;
+}
+
+.options {
+  text-align: center;
+}

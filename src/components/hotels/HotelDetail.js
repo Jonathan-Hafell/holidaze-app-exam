@@ -1,15 +1,22 @@
 import { useState, useEffect } from "react";
 import { useParams, useHistory } from "react-router-dom";
-/* import { API } from "../../constants/api"; */
 import { BASE_URL, HOTELS_ENDPOINT } from "../../constants/api";
 import Carousel from "react-bootstrap/Carousel";
 import Modal from "react-bootstrap/Modal";
 import Button from "react-bootstrap/Button";
+import "../../css/details.css";
+import NumericInput from "react-numeric-input";
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
 
 function HotelDetail() {
   const [hotel, setHotel] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+
+  const [startDate, setStartDate] = useState(new Date());
+  const [endDate, setEndDate] = useState(new Date());
+  const today = new Date();
 
   let history = useHistory();
 
@@ -83,19 +90,23 @@ function HotelDetail() {
       </Carousel>
 
       <div className="hotel-details">
-        <h1>{hotel.name}</h1>
-
-        <div className="ratings">
+        <div className="details-head">
+          <h1>{hotel.name}</h1>
           <span>
             {hotel.rating} <i class="fas fa-star"></i>
           </span>
-          <span>{hotel.reviews} Reviews</span>
         </div>
-        <h2>{hotel.price} Kr</h2>
+
+        <div className="ratings">
+          <p>
+            Based on <span>{hotel.reviews} Reviews</span>
+          </p>
+        </div>
+        <h2 className="details-price">{hotel.price} Kr</h2>
         <p>{hotel.description}</p>
 
-        <Button variant="primary" onClick={handleShow}>
-          Book now
+        <Button className="details-btn" onClick={handleShow}>
+          Book now <i class="fas fa-long-arrow-alt-right"></i>
         </Button>
 
         <Modal
@@ -105,17 +116,65 @@ function HotelDetail() {
           keyboard={false}
         >
           <Modal.Header closeButton>
-            <Modal.Title>Modal title</Modal.Title>
+            <Modal.Title>Booking of {hotel.name}</Modal.Title>
           </Modal.Header>
           <Modal.Body>
-            I will not close if you click outside me. Don't even try to press
-            escape key.
+            <h6>Thank you for booking a room at {hotel.name}!</h6>
+            <br></br>
+            <p>To proceed with the booking, complete the form an click "Yes"</p>
+            <p>
+              One night from{" "}
+              <span className="modal-price">{hotel.price} Kr</span>
+            </p>
+            <div className="people-mod">
+              <div className="adults-mod">
+                <p>Adults:</p>
+                <NumericInput className="form-control" value={1} />
+              </div>
+
+              <div className="children-mod">
+                <p>Children:</p>
+                <NumericInput className="form-control" value={1} />
+              </div>
+            </div>
+            <div>
+              <p className="checkin">Check in</p>
+              <DatePicker
+                className="datepicker"
+                dateFormat="dd/MM/yyyy"
+                disabledDays={{ before: today }}
+                showWeekNumbers
+                selected={startDate}
+                onChange={(date) => setStartDate(date)}
+                peekNextMonth
+                showMonthDropdown
+                showYearDropdown
+                dropdownMode="select"
+              />{" "}
+              <i class="far fa-calendar-alt"></i>
+            </div>
+            <div>
+              <p className="checkout">Check out</p>
+              <DatePicker
+                className="datepicker"
+                dateFormat="dd/MM/yyyy"
+                disabledDays={{ before: today }}
+                showWeekNumbers
+                selected={endDate}
+                onChange={(date) => setEndDate(date)}
+                peekNextMonth
+                showMonthDropdown
+                showYearDropdown
+                dropdownMode="select"
+              />{" "}
+              <i class="far fa-calendar-alt"></i>
+            </div>
           </Modal.Body>
           <Modal.Footer>
             <Button variant="secondary" onClick={handleClose}>
               Close
             </Button>
-            <Button variant="primary">Understood</Button>
+            <Button variant="primary">Yes, book now</Button>
           </Modal.Footer>
         </Modal>
       </div>

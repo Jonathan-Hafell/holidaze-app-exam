@@ -93,39 +93,7 @@ body {
   background-color: white;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   padding: 16px;
-  margin: -200px 16px;
-}
-
-.travel-search p {
-  font-size: 14px;
-  margin-bottom: 8px;
-}
-
-.travel-search h4 {
-  font-weight: bold;
-}
-
-.selection label {
-  margin-right: 8px;
-}
-
-.selection {
-  display: flex;
-  align-items: baseline;
-  margin-bottom: 16px;
-  flex-flow: wrap;
-}
-
-.selection select {
-  width: 55px;
-  height: 30px;
-}
-
-.people {
-  display: flex;
-  justify-content: space-between;
-  width: 275px;
-  margin-top: 16px;
+  margin: 24px 0 0;
 }
 
 .enquiry-search {
@@ -137,66 +105,15 @@ body {
   font-size: 22px;
   font-weight: bold;
   cursor: pointer;
+  margin-top: 16px;
 }
 
-/* FEATURED */
-
-.featured-products {
-  margin: 216px 16px 0;
-  overflow: auto;
-  white-space: nowrap;
-  overflow: hidden;
+.datepicker {
+  width: 275px;
 }
 
-.card-inner {
-  padding: 16px;
-}
-
-.featured-price {
-  font-weight: bold;
-  color: #e72574;
-  font-size: 18px;
-}
-
-.card-name {
-  /*  margin-bottom: 16px; */
-  display: flex;
-  justify-content: space-between;
-}
-
-.fa-star {
-  color: #ffd31d;
-}
-
-.price-from {
-  font-size: 14px;
-}
-
-.featured-reviews {
-  color: #289672;
-  font-weight: bold;
-}
-
-.featured-card {
-  display: inline-block;
-  margin-right: 24px;
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 15px 0 rgba(0, 0, 0, 0.19);
-}
-
-.featured h1 {
-  margin: 0 0 24px;
-  font-size: 24px;
-  font-weight: bold;
-}
-
-.featured-btn {
-  background-color: inherit;
-  color: #0061a8;
-  font-weight: bold;
-  border-radius: 0;
-}
-
-.fa-long-arrow-alt-right {
+.fa-calendar-alt {
+  font-size: 20px;
   margin-left: 8px;
 }
 

@@ -1,0 +1,59 @@
+/* FEATURED */
+
+.featured-products {
+  margin: 56px 16px 0;
+  overflow: auto;
+  white-space: nowrap;
+  overflow: auto;
+}
+
+.card-inner {
+  padding: 16px;
+}
+
+.featured-price {
+  font-weight: bold;
+  color: #e72574;
+  font-size: 18px;
+}
+
+.card-name {
+  display: flex;
+  justify-content: space-between;
+}
+
+.fa-star {
+  color: #ffd31d;
+}
+
+.price-from {
+  font-size: 14px;
+}
+
+.featured-reviews {
+  color: #289672;
+  font-weight: bold;
+}
+
+.featured-card {
+  display: inline-block;
+  margin-right: 24px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 15px 0 rgba(0, 0, 0, 0.19);
+}
+
+.featured h1 {
+  margin: 0 0 24px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.featured-btn {
+  background-color: inherit;
+  color: #0061a8;
+  font-weight: bold;
+  border-radius: 0;
+}
+
+.fa-long-arrow-alt-right {
+  margin-left: 8px;
+}
