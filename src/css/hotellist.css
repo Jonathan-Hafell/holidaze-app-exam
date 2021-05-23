@@ -1,0 +1,19 @@
+@media screen and (min-width: 769px) {
+  .container {
+    margin: 0;
+  }
+
+  .hotels {
+    margin-top: 40px;
+    display: flex;
+    width: 1200px;
+    margin-left: 360px;
+    flex-flow: wrap;
+    justify-content: space-between;
+  }
+
+  .hotel-card {
+    margin: 0 0 40px 0;
+    width: 500px;
+  }
+}

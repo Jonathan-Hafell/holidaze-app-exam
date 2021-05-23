@@ -1,5 +1,6 @@
 import "../../css/contact.css";
 import Form from "react-bootstrap/Form";
+import "../../css/login.css";
 
 export default function LoginForm() {
   return (

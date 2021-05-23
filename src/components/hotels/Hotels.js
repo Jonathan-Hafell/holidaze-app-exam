@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { BASE_URL, HOTELS_ENDPOINT } from "../../constants/api";
 import HotelItem from "./HotelItem";
+import "../../css/hotellist.css";
 /* import Button from "react-bootstrap/Button"; */
 
 function Hotels() {
@@ -39,8 +40,6 @@ function Hotels() {
 
   return (
     <div className="hotels">
-      <h1 className="header">Holidaze</h1>
-      <p className="options">We offer hotel stays, airbnb and b&b</p>
       {hotels.map(function (hotel) {
         const { id, name, imageUrl, price, rating, reviews } = hotel;
         return (

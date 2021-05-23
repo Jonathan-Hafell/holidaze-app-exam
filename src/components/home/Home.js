@@ -14,62 +14,65 @@ function Home() {
   const today = new Date();
   return (
     <>
-      <div className="enquiry-wrapper">
-        <div className="travel-search">
-          <h4>Where do you want to stay?</h4>
-          <p>Hotels and offers...</p>
-          <Search />
-          <hr></hr>
-        </div>
-
-        <div>
-          <div className="people-mod">
-            <div className="adults-mod">
-              <p>Adults:</p>
-              <NumericInput className="form-control" value={1} />
-            </div>
-
-            <div className="children-mod">
-              <p>Children:</p>
-              <NumericInput className="form-control" value={1} />
-            </div>
+      <div className="home-wrapper">
+        <div className="bg-home"></div>
+        <div className="enquiry-wrapper">
+          <div className="travel-search">
+            <h4>Where do you want to stay?</h4>
+            <p>Hotels and offers...</p>
+            <Search />
+            <hr></hr>
           </div>
-          <p className="checkin">Check in</p>
-          <DatePicker
-            className="datepicker"
-            dateFormat="dd/MM/yyyy"
-            disabledDays={{ before: today }}
-            showWeekNumbers
-            selected={startDate}
-            onChange={(date) => setStartDate(date)}
-            peekNextMonth
-            showMonthDropdown
-            showYearDropdown
-            dropdownMode="select"
-          />{" "}
-          <i class="far fa-calendar-alt"></i>
-        </div>
-        <div>
-          <p className="checkout">Check out</p>
-          <DatePicker
-            className="datepicker"
-            dateFormat="dd/MM/yyyy"
-            disabledDays={{ before: today }}
-            showWeekNumbers
-            selected={endDate}
-            onChange={(date) => setEndDate(date)}
-            peekNextMonth
-            showMonthDropdown
-            showYearDropdown
-            dropdownMode="select"
-          />{" "}
-          <i class="far fa-calendar-alt"></i>
-        </div>
 
-        <button className="enquiry-search">Search</button>
+          <div>
+            <div className="people-mod">
+              <div className="adults-mod">
+                <p>Adults:</p>
+                <NumericInput className="form-control" value={1} />
+              </div>
+
+              <div className="children-mod">
+                <p>Children:</p>
+                <NumericInput className="form-control" value={1} />
+              </div>
+            </div>
+            <p className="checkin">Check in</p>
+            <DatePicker
+              className="datepicker"
+              dateFormat="dd/MM/yyyy"
+              disabledDays={{ before: today }}
+              showWeekNumbers
+              selected={startDate}
+              onChange={(date) => setStartDate(date)}
+              peekNextMonth
+              showMonthDropdown
+              showYearDropdown
+              dropdownMode="select"
+            />{" "}
+            <i class="far fa-calendar-alt"></i>
+          </div>
+          <div>
+            <p className="checkout">Check out</p>
+            <DatePicker
+              className="datepicker"
+              dateFormat="dd/MM/yyyy"
+              disabledDays={{ before: today }}
+              showWeekNumbers
+              selected={endDate}
+              onChange={(date) => setEndDate(date)}
+              peekNextMonth
+              showMonthDropdown
+              showYearDropdown
+              dropdownMode="select"
+            />{" "}
+            <i class="far fa-calendar-alt"></i>
+          </div>
+
+          <button className="enquiry-search">Search</button>
+        </div>
       </div>
 
-      <div className="featured">
+      <div className="featured-container">
         <div className="featured-products">
           <h1>Featured</h1>
           <Featured />

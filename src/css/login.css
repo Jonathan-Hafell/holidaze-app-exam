@@ -9,3 +9,14 @@
 .password {
   width: 343px;
 }
+
+@media screen and (min-width: 769px) {
+  .login-container {
+    margin-left: 360px;
+    margin-bottom: 600px;
+  }
+
+  .form-group input {
+    width: 600px;
+  }
+}

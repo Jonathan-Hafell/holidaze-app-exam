@@ -29,3 +29,21 @@ textarea {
   padding: 0 0 8px 0;
   font-weight: bold;
 }
+
+@media screen and (min-width: 769px) {
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .contact-container {
+    margin-left: 360px;
+    margin-bottom: 700px;
+    width: 1200px;
+  }
+
+  .contact-form input,
+  textarea {
+    width: 700px;
+  }
+}

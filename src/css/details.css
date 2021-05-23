@@ -48,3 +48,18 @@
 .react-numeric-input {
   width: 100px;
 }
+
+@media screen and (min-width: 769px) {
+  .hotel-details {
+    margin-left: 360px;
+  }
+
+  .caro {
+    width: 400px;
+    margin-left: 360px;
+  }
+
+  .carousel {
+    width: 1200px;
+  }
+}

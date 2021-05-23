@@ -23,7 +23,7 @@ function Layout() {
         </NavLink>
         <Navbar.Toggle aria-controls="basic-navbar-nav" className="test" />
         <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="ml-auto">
+          <Nav className="ml-auto nav-inner">
             <NavLink to="/Home" exact className="nav-link">
               Home
             </NavLink>

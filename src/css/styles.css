@@ -7,10 +7,7 @@ body {
 }
 
 .bg-home {
-  background-image: url("../image/bg-exam.png");
-  width: 375px;
-  height: 500px;
-  background-repeat: no-repeat;
+  display: none;
 }
 
 .navbar {
@@ -39,23 +36,19 @@ body {
 }
 
 .result-item {
-  position: relative;
-  text-align: center;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  padding: 8px;
+  margin-bottom: 16px;
 }
 
 .image-name {
   color: #a03232;
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  margin: 0;
   font-size: 16px;
-  background-color: white;
-  padding: 4px;
+  width: 140px;
 }
 
 .image {
-  width: 150px;
+  width: 140px;
   height: 100px;
 }
 
@@ -161,4 +154,64 @@ body {
   display: flex;
   justify-content: center;
   margin-bottom: 16px;
+}
+
+@media screen and (min-width: 376px) {
+  .enquiry-wrapper {
+    width: 375px;
+  }
+
+  .home-wrapper {
+    display: flex;
+  }
+
+  .bg-home {
+    display: block;
+    background-image: url("../image/bg-exam.png");
+    width: 375px;
+    height: 476px;
+    background-repeat: no-repeat;
+    margin-top: 24px;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .bg-home {
+    height: 476px;
+  }
+
+  .bg-home {
+    background-image: url("../image/acapulco-3605307_1920.jpg");
+    width: 1000px;
+    height: 476px;
+    background-position: 50% 0%;
+    background-repeat: no-repeat;
+  }
+
+  .container {
+    margin: 0;
+  }
+
+  .home-wrapper {
+    margin-left: 360px;
+    width: 1200px;
+  }
+
+  .featured-container {
+    margin-left: 360px;
+    margin-top: 56px;
+  }
+
+  .holidays {
+    margin-left: 360px;
+  }
+
+  .home {
+    width: 1200px;
+    margin: 0 auto;
+  }
+
+  .navbar {
+    padding: 0 360px;
+  }
 }
