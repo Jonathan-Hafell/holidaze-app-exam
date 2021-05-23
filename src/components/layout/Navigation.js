@@ -19,11 +19,11 @@ function Layout() {
     <Router>
       <Navbar className="navbar" expand="lg">
         <NavLink to="/Home" exact>
-          <Navbar.Brand>Holidaze</Navbar.Brand>
+          <Navbar.Brand className="logo">Holidaze</Navbar.Brand>
         </NavLink>
         <Navbar.Toggle aria-controls="basic-navbar-nav" className="test" />
         <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="mr-auto">
+          <Nav className="ml-auto">
             <NavLink to="/Home" exact className="nav-link">
               Home
             </NavLink>

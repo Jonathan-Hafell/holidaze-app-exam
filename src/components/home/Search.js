@@ -63,14 +63,14 @@ class SearchBar extends React.Component {
   };
 
   renderSearchResults = () => {
-    const { results } = this.state;
+    const { results, id } = this.state;
 
     if (Object.keys(results).length && results.length) {
       return (
         <div className="results-container">
           {results.map((result) => {
             return (
-              <a key={result.id} href={result.id} className="result-item">
+              <a key={result.id} href={`hotels/${id}`} className="result-item">
                 <h6 className="image-name">{result.name}</h6>
                 <div className="image-wrapper">
                   <img
@@ -91,7 +91,6 @@ class SearchBar extends React.Component {
     const { query, loading, message } = this.state;
     return (
       <div className="search-container">
-        <h3>Search bar</h3>
         <label>
           <input
             type="text"

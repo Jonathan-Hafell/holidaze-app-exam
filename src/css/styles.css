@@ -11,6 +11,7 @@ body {
   width: 375px;
   height: 500px;
   background-repeat: no-repeat;
+  padding: 350px 0 0;
 }
 
 .navbar {
@@ -27,7 +28,9 @@ body {
 /* SEARCHBAR */
 
 #search-input {
-  width: 250px;
+  width: 309px;
+  margin: 0;
+  padding: 4px;
 }
 
 .search-container {
@@ -70,4 +73,109 @@ body {
 
 .hide {
   display: none;
+}
+
+/* enquiry */
+
+.enquiry-wrapper {
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  padding: 16px;
+  margin: 0 16px;
+}
+
+.travel-search p {
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.travel-search h4 {
+  font-weight: bold;
+}
+
+.selection label {
+  margin-right: 8px;
+}
+
+.selection {
+  display: flex;
+  align-items: baseline;
+  margin-bottom: 16px;
+  flex-flow: wrap;
+}
+
+.selection select {
+  width: 55px;
+  height: 30px;
+}
+
+.people {
+  display: flex;
+  justify-content: space-between;
+  width: 275px;
+  margin-top: 16px;
+}
+
+.enquiry-search {
+  border: none;
+  padding: 8px;
+  background-color: #e72574;
+  color: white;
+  width: 311px;
+  font-size: 22px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* FEATURED */
+
+.featured-products {
+  margin: 216px 16px 0;
+  overflow: auto;
+  white-space: nowrap;
+}
+
+.card-inner {
+  padding: 16px;
+}
+
+.featured-ratings {
+  /* width: 160px; */
+  display: flex;
+  justify-content: space-between;
+}
+
+.featured-price {
+  font-weight: bold;
+  color: #e72574;
+  font-size: 18px;
+}
+
+.card-name {
+  margin-bottom: 16px;
+}
+
+.fa-star {
+  color: #ffd31d;
+}
+
+.price-from {
+  font-size: 14px;
+}
+
+.featured-reviews {
+  color: #289672;
+  font-weight: bold;
+}
+
+.featured-card {
+  display: inline-block;
+  margin-right: 24px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 15px 0 rgba(0, 0, 0, 0.19);
+}
+
+.featured h1 {
+  margin: 0 0 24px;
+  font-size: 24px;
+  font-weight: bold;
 }

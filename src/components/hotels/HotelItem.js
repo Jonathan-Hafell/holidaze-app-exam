@@ -27,17 +27,3 @@ HotelItem.propTypes = {
 };
 
 export default HotelItem;
-
-/* return (
-              <a key={result.id} href={result.imageUrl} className="result-item">
-                <h6 className="image-name">{result.name}</h6>
-                <div className="image-wrapper">
-                  <img
-                    className="image"
-                    src={result.imageUrl}
-                    alt={result.name}
-                  />
-                </div>
-              </a>
-            );
-          })} */
