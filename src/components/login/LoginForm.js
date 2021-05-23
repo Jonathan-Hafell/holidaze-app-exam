@@ -1,10 +1,30 @@
-/* import { set, useForm } from "react-hook-form";
-import * as Yup from "yup";
-import { yupResolver } from "@hookform/resolvers/yup";
-import { useState, useContext } from "react";
-import { useHistory } from "react-router-dom";
-import axios from "axios";
-import { BASE_URL, tokenPath } from "../../constants/api";
-import AuthContext from "../../components/context/AuthContext";
+import "../../css/contact.css";
+import Form from "react-bootstrap/Form";
 
-const url = BASE_URL + tokenPath; */
+export default function LoginForm() {
+  return (
+    <>
+      <div className="login-container">
+        <h1>login</h1>
+        <Form>
+          <Form.Group controlId="username">
+            <Form.Label>Username</Form.Label>
+            <Form.Control
+              className="username"
+              type="name"
+              placeholder="Enter username"
+            />
+          </Form.Group>
+          <Form.Group controlId="formGroupPassword">
+            <Form.Label>Password</Form.Label>
+            <Form.Control
+              className="password"
+              type="password"
+              placeholder="Password"
+            />
+          </Form.Group>
+        </Form>
+      </div>
+    </>
+  );
+}
